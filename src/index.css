@@ -1,13 +1,508 @@
-body {
+*, *::before, *::after{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*-----------------------------Form Page----------------------------------------*/
+.form-div{
+  width: 100%;
+  height: 100vh;
+  
+}
+
+.form-div .form_Bg{
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.1);
+}
+
+.form-container{
+  position: absolute;
+  top: 5vh;
+  left: calc(20%/2);
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-container .form-aside{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+}
+
+.form-aside .form-aside-img{
+  width: 80%;
+  height: 100%;
+}
+
+.form-aside .form-aside-nav{
+  width: 20%;
+  height: 99%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid rgb(240, 234, 234);
+}
+
+.form-aside-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.login-nav, .reg-nav, .forgot-pass-nav{
+  width: 100%;
+  height: calc(100%/3);
+}
+
+.form-aside-nav button{
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.form-aside-nav .active{
+  background: #180D5B;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.form-container .form{
+  background: #fff;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer{
+  width: 90%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 3px 3px 5px rgb(228, 218, 218),
+              -3px -3px 5px rgb(228, 218, 218);
+}
+
+.formContainer .formHeader{
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer .formRegisterHeader{
+  height: 25% !important;
+}
+
+.formContainer .formForgotHeader{
+  height: 65% !important;
+}
+
+.formHeader img{
+  width: 100%;
+  height: 100%;
+}
+
+.formContainer .formBody{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formBody .alternativeLinks{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.alternativeLinks .gmail{
+  background: none;
+  border: 1px solid rgb(247, 56, 56);
+  color: rgb(247, 56, 56);
+  border-radius: 5px;
+  width: 5rem;
+}
+
+.formContainer .formInputs{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formInputs .input,
+.formInputs .submitBtn
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input .input_icon{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  background: #EEEEEE;
+  height: 30px;
+  padding-left: 0.5rem;
+}
+
+.formInputs input{
+  width: 98%;
+  background: #EEEEEE;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+.input small{
+  color: #c43e3e;
+  display: none;
+}
+
+.formInputs .submitBtn button{
+  background: #180D5B;
+  color: #fff;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/*-------------------- LARGER MEDIUM DEVICES (Form Page)--------------------------------*/
+
+@media screen and (max-width:950px) {
+
+  .form-container{
+    left: calc(10%/2);
+    width: 90%;
+  }
+  
+
+}
+
+/*-------------------- LARGER MEDIUM DEVICES (Form Page)--------------------------------*/
+
+@media screen and (max-width:768px) {
+  .form-div{
+    height:190vh;
+  }
+
+  .form-div .form_Bg{
+    display: none;
+  }
+
+  .form-div .form-container{
+    top: 5vh;
+    width: 90%;
+    left: calc(10%/2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 3px 5px rgb(228, 218, 218),
+              -3px -3px 5px rgb(228, 218, 218);
+    height: auto;
+  }
+
+  .form-container .form-aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    height: 4rem;
+  }
+
+  .form-aside .form-aside-img{
+   display: none;
+  }
+  
+  .form-aside .form-aside-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .login-nav, .reg-nav, .forgot-pass-nav{
+    width: 100%;
+    height: 100%;
+  }
+
+  .form-aside-nav h4{
+    font-size: smaller;
+  }
+
+  .form-container .form{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .formContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    box-shadow: none;
+  }
+
+  
+  .formContainer .formHeader{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+
+  .formContainer .formBody{
+  gap: 1.5rem;
+}
+
+/*
+.formBody .alternativeLinks{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid green;
+}
+*/
+
+.alternativeLinks span{
+  font-size: large;
+}
+
+/*
+.alternativeLinks .gmail{
+  background: none;
+  border: 1px solid rgb(247, 56, 56);
+  color: rgb(247, 56, 56);
+  border-radius: 5px;
+  width: 5rem;
+}
+*/
+
+
+.formContainer .formInputs{
+  gap: 1rem;
+}
+
+/*
+.formInputs .input,
+.formInputs .submitBtn
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+*/
+
+.input .input_icon{
+  height: 40px;
+}
+
+/*
+.formInputs input{
+  width: 98%;
+  background: #EEEEEE;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+*/
+
+/*
+.input small{
+  color: #c43e3e;
+  display: none;
+}
+*/
+
+
+.formInputs .submitBtn button{
+  height: 35px;
+}
+
+}
+
+/*-------------------- IPAD/TABLET (Form Page)--------------------------------*/
+
+@media screen and (max-width:481px) {
+  .form-div{
+    height:150vh;
+  }
+}
+
+
+/*-------------------- MOBILE DEVICE (Form Page)--------------------------------*/
+
+@media screen and (max-width:320px) {
+  
+  .form-div{
+    height: auto;
+  }
+
+  .form-container .form-aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    height: 4rem;
+  }
+
+  .form-aside .form-aside-img{
+   display: none;
+  }
+  
+  .form-aside .form-aside-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .login-nav, .reg-nav, .forgot-pass-nav{
+    width: 100%;
+    height: 100%;
+  }
+
+  .form-aside-nav h4{
+    font-size: smaller;
+  }
+
+  .form-container .form{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .formContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    box-shadow: none;
+  }
+
+  
+  .formContainer .formHeader{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+
+  .formContainer .formBody{
+  gap: 0.5rem;
+}
+
+.formBody h1{
+  font-size: x-large;
+}
+
+/*
+.formBody .alternativeLinks{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid green;
+}
+*/
+
+.alternativeLinks span{
+  font-size: smaller;
+}
+
+/*
+.alternativeLinks .gmail{
+  background: none;
+  border: 1px solid rgb(247, 56, 56);
+  color: rgb(247, 56, 56);
+  border-radius: 5px;
+  width: 5rem;
+}
+*/
+
+
+.formContainer .formInputs{
+  gap: 0.5rem;
+}
+
+/*
+.formInputs .input,
+.formInputs .submitBtn
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+*/
+
+.input .input_icon{
+  height: 20px;
+}
+
+/*
+.formInputs input{
+  width: 98%;
+  background: #EEEEEE;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+*/
+
+/*
+.input small{
+  color: #c43e3e;
+  display: none;
+}
+*/
+
+
+.formInputs .submitBtn button{
+  height: 25px;
+}
+  
 }
