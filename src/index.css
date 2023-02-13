@@ -5,6 +5,7 @@
 }
 
 /*-----------------------------Form Page----------------------------------------*/
+
 .form-div{
   width: 100%;
   height: 100vh;
@@ -205,7 +206,8 @@
 
 @media screen and (max-width:768px) {
   .form-div{
-    height:190vh;
+    padding-bottom: 0.5rem;
+    height: fit-content;
   }
 
   .form-div .form_Bg{
@@ -213,15 +215,15 @@
   }
 
   .form-div .form-container{
-    top: 5vh;
+    position: inherit;
+    margin-top: 5vh;
     width: 90%;
-    left: calc(10%/2);
+    margin-left: calc(10%/2);
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 3px 3px 5px rgb(228, 218, 218),
               -3px -3px 5px rgb(228, 218, 218);
-    height: auto;
   }
 
   .form-container .form-aside{
@@ -287,67 +289,17 @@
   gap: 1.5rem;
 }
 
-/*
-.formBody .alternativeLinks{
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-  border: 1px solid green;
-}
-*/
-
 .alternativeLinks span{
   font-size: large;
 }
-
-/*
-.alternativeLinks .gmail{
-  background: none;
-  border: 1px solid rgb(247, 56, 56);
-  color: rgb(247, 56, 56);
-  border-radius: 5px;
-  width: 5rem;
-}
-*/
-
 
 .formContainer .formInputs{
   gap: 1rem;
 }
 
-/*
-.formInputs .input,
-.formInputs .submitBtn
-{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-*/
-
 .input .input_icon{
   height: 40px;
 }
-
-/*
-.formInputs input{
-  width: 98%;
-  background: #EEEEEE;
-  border: none;
-  outline: none;
-  height: 100%;
-}
-*/
-
-/*
-.input small{
-  color: #c43e3e;
-  display: none;
-}
-*/
-
 
 .formInputs .submitBtn button{
   height: 35px;
@@ -358,19 +310,13 @@
 /*-------------------- IPAD/TABLET (Form Page)--------------------------------*/
 
 @media screen and (max-width:481px) {
-  .form-div{
-    height:150vh;
-  }
+
 }
 
 
 /*-------------------- MOBILE DEVICE (Form Page)--------------------------------*/
 
 @media screen and (max-width:320px) {
-  
-  .form-div{
-    height: auto;
-  }
 
   .form-container .form-aside{
     display: flex;
@@ -407,7 +353,6 @@
   .form-container .form{
     width: 100%;
     height: 100%;
-    padding-bottom: 1rem;
   }
 
   .formContainer{
@@ -439,70 +384,20 @@
   font-size: x-large;
 }
 
-/*
-.formBody .alternativeLinks{
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-  border: 1px solid green;
-}
-*/
-
 .alternativeLinks span{
   font-size: smaller;
 }
 
-/*
-.alternativeLinks .gmail{
-  background: none;
-  border: 1px solid rgb(247, 56, 56);
-  color: rgb(247, 56, 56);
-  border-radius: 5px;
-  width: 5rem;
-}
-*/
-
-
 .formContainer .formInputs{
-  gap: 0.5rem;
+  gap: 1rem;
 }
-
-/*
-.formInputs .input,
-.formInputs .submitBtn
-{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-*/
 
 .input .input_icon{
-  height: 20px;
+  height: 30px;
 }
-
-/*
-.formInputs input{
-  width: 98%;
-  background: #EEEEEE;
-  border: none;
-  outline: none;
-  height: 100%;
-}
-*/
-
-/*
-.input small{
-  color: #c43e3e;
-  display: none;
-}
-*/
-
 
 .formInputs .submitBtn button{
-  height: 25px;
+  height: 30px;
 }
   
 }
